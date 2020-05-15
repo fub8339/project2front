@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {enterEditMode, leaveEditMode,startSavingMemory,startDeletingMemory} from './actions'
 
-const months = ["January", "February", "March","April","May","June","July","Auguest","September","October","November","December"];
+// const months = ["January", "February", "March","April","May","June","July","Auguest","September","October","November","December"];
 
 
 export function Memory(props){
