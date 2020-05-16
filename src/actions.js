@@ -66,12 +66,12 @@ function checkForErrors(response){
     return response;
 }
 
-const host = 'https://today-api.twodee.org:8442';
+const host = 'https://project2cs268.duckdns.org:8442';
 
-export function loadDay(month,day){
+export function loadDay(userName){
     return dispatch =>{
         dispatch(startWaiting());
-        fetch(`${host}/memories/${month}/${day}`)
+        fetch(`${host}/memories/${userName}`)
         .then(checkForErrors)
         .then(response => response.json())
         .then(data =>{
@@ -83,9 +83,9 @@ export function loadDay(month,day){
     }; 
 }
 
-export function startAddingMemory(year,month,day){
+export function startAddingMemory(userName){
     
-    const memory = {year, month, day, messate:''};
+    const memory = {userName};
     const options = {
         method:'POST',
         headers:{

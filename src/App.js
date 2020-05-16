@@ -1,14 +1,15 @@
-  import React, {useEffect} from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import {Memory} from './Memory';
 import {useSelector, useDispatch} from 'react-redux';
 import {loadDay,startAddingMemory} from './actions';
 
 
-const date = new Date();
-const year = date.getFullYear();
-const month = date.getMonth() + 1;
-const day = date.getDate();
+// const date = new Date();
+// const year = date.getFullYear();
+// const month = date.getMonth() + 1;
+// const day = date.getDate();
+const userName = "liuj0331";
 
 function App() {
 
@@ -16,13 +17,14 @@ function App() {
   const isWaiting =useSelector(state => state.isWaiting);
   const dispatch = useDispatch();
 
+
   useEffect(() =>{
-    dispatch(loadDay(4,7));
+    dispatch(loadDay(userName));
   },[dispatch]);
 
 
 const onAdd =() =>{
-  dispatch(startAddingMemory(year,month,day));
+  dispatch(startAddingMemory(userName));
 }
 
 
