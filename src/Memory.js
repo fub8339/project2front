@@ -49,8 +49,9 @@ export function Memory(props){
             <div className = "card">
                 
                 <div className = "card-left">
-                    <label>Name:</label>
-                    <input type="text" value={userName} onChange={e => setUserName(e.target.value)}/>
+                    <label>UserName:</label>
+                    {/* <input type="text" value={userName} onChange={e => setUserName(e.target.value)}/> */}
+                    <input type="text" value={userName} readOnly/>
                     <label>Phone Number:</label>
                     <input type="text" value={phone_Number} onChange={e => setPhoneNumber(e.target.value)}/>
                     <label>Email:</label>
@@ -64,8 +65,8 @@ export function Memory(props){
                 </div>
                 <div className = "card-right">
                     <label>Item to sale: </label>
-                    <input type="text" onChange={e => serItemName(e.target.value)}/>
-                    <textarea placeholder="please enter item info"  onChange={e => setItemInfo(e.target.value)}/>
+                    <input type="text" value={itemName} onChange={e => serItemName(e.target.value)}/>
+                    <textarea placeholder="please enter item info" value={itemInfo} onChange={e => setItemInfo(e.target.value)}/>
                 </div>
             </div>
         );
@@ -73,7 +74,7 @@ export function Memory(props){
         return(
             <div className = "card">
                 <div className = "card-left">
-                    <label>Name:</label>
+                    <label>UserName:</label>
                     <p>{memory.userName}</p>
                     <label>Phone Number:</label>
                     <p>{memory.phone_Number}</p>

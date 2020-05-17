@@ -13,7 +13,11 @@
   width:150px;
 }  
 
-
+.userName{
+  margin-left:15px;
+  margin-top:10px;
+  font-weight: bold;
+}
 
 button{
   /* some of the code below for button are learnt from fdossena.com */
@@ -33,6 +37,14 @@ button{
 button:hover{
   background-color:#4095c6;
 }
+
+input,textarea{
+  font-weight: bold;
+  color:#2b3e85;
+}
+
+
+
 
 
 

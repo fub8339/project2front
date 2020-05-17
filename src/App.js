@@ -5,11 +5,12 @@ import {useSelector, useDispatch} from 'react-redux';
 import {loadDay,startAddingMemory} from './actions';
 
 
-// const date = new Date();
-// const year = date.getFullYear();
-// const month = date.getMonth() + 1;
-// const day = date.getDate();
-const userName = "liuj0331";
+
+
+// const userName = "TEST";
+
+const userName = "liuj0331"
+
 
 function App() {
 
@@ -33,7 +34,7 @@ const onAdd =() =>{
     <div className="main-root">
       {isWaiting && <div className="spinner"/>}
        <div className="header">Welcome to UWEC Second-hand Markeplace</div>
-       <button onClick = {onAdd} class="addButton">Add My Item</button>
+        <span className="userName">UserName: {userName}</span><button onClick = {onAdd} class="addButton">Add My Item</button>
        <div className="card-root">
            {memories.map(memory => <Memory key={memory.id} memory = {memory} />)}
         </div>

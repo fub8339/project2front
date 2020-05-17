@@ -71,7 +71,7 @@ const host = 'https://project2cs268.duckdns.org:8442';
 export function loadDay(userName){
     return dispatch =>{
         dispatch(startWaiting());
-        fetch(`${host}/memories/${userName}`)
+        fetch(`${host}/memories/userName/${userName}`)
         .then(checkForErrors)
         .then(response => response.json())
         .then(data =>{
