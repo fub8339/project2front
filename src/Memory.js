@@ -6,6 +6,7 @@ import {enterEditMode, leaveEditMode,startSavingMemory,startDeletingMemory} from
 export function Memory(props){
     const memory = props.memory;
     const dispatch = useDispatch();
+    const [userName,setUserName] = useState(memory.userName);
     const [phone_Number,setPhoneNumber] = useState(memory.phone_Number);
     const [email,setEmail] = useState(memory.email);
     const [campus,setCampus] = useState(memory.campus);
