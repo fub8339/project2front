@@ -2,13 +2,10 @@ import React, {useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {enterEditMode, leaveEditMode,startSavingMemory,startDeletingMemory} from './actions'
 
-// const months = ["January", "February", "March","April","May","June","July","Auguest","September","October","November","December"];
-
 
 export function Memory(props){
     const memory = props.memory;
     const dispatch = useDispatch();
-    const [userName,setUserName] = useState(memory.userName);
     const [phone_Number,setPhoneNumber] = useState(memory.phone_Number);
     const [email,setEmail] = useState(memory.email);
     const [campus,setCampus] = useState(memory.campus);
@@ -50,7 +47,6 @@ export function Memory(props){
                 
                 <div className = "card-left">
                     <label>UserName:</label>
-                    {/* <input type="text" value={userName} onChange={e => setUserName(e.target.value)}/> */}
                     <input type="text" value={userName} readOnly/>
                     <label>Phone Number:</label>
                     <input type="text" value={phone_Number} onChange={e => setPhoneNumber(e.target.value)}/>
@@ -83,8 +79,6 @@ export function Memory(props){
                     <label>Campus:</label>
                     <p>{memory.campus}</p>
                     
-                    {/* <span className = "year">{memory.year}</span>
-                    <span>{months[memory.month -1 ]}  {memory.day}</span> */}
                     <button onClick={onEdit}>edit</button>
                     <button onClick={onDelete} className="delete-button">delete</button>
                 </div>
